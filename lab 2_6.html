@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Використання оператора IF</title>
+	</head>	
+	<body>
+		<script> "use strict";
+        const secretNumber = Math.floor(Math.random() * 50) + 1; // випадкове число від 1 до 10
+        let attempts = 0; // лічильник спроб
+        let guessed = false; // стан гри
+
+        let answer = confirm("Зіграємо в гру 'Вгадай число'?");
+
+        if (answer) {
+            while (!guessed) {
+                let guess = parseInt(prompt("Введіть число від 1 до 50:"));
+                attempts++;
+
+                if (guess === secretNumber) {
+                    alert("Вітаю! Ви вгадали число: " + secretNumber + "\nКількість спроб: " + attempts);
+                    guessed = true;
+                } else {
+                    alert("Неправильно! Спробуйте ще раз.");
+                }
+            }
+        } else {
+            alert("Шкода, що ви не хочете грати.\nМожливо в інший раз!");
+        }
+		</script>
+	</body>
+    <a href="lab 2.html">Головна</a>
+</html>

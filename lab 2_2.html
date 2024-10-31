@@ -1,0 +1,36 @@
+<html></html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Використання оператора IF</title>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+			//Приклад знаходження більшого среди трех чисел
+			
+			 // Визначення більшого з чисел
+             let number = confirm("Визначення більшого з чисел");
+    if (number) {
+        let a = parseFloat(prompt("Введіть перше число (a):"));
+        let b = parseFloat(prompt("Введіть друге число (b):"));
+        let c = parseFloat(prompt("Введіть третє число (c):"));
+
+        if (a > b && a > c) {
+            document.write("Найбільше серед трьох чисел - a = " + a);
+        } else if (b > c) {
+            document.write("Найбільше серед трьох чисел - b = " + b);
+        } else {
+            document.write("Найбільше серед трьох чисел - c = " + c);
+        }
+    } else {
+        alert("Помилка");
+    }
+
+    let max = a > b ? a : b;
+    max = max > c ? max : c;
+
+    document.write("<p>Значення найбільшого серед трьох чисел = " + max + "</p>");
+		</script>
+	</body>
+    <a href="lab 2.html">Головна</a>
+</html>

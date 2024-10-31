@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Використання оператора IF</title>
+	</head>	
+	<body>
+		<script> 
+			  document.write("<p>Використання оператора циклу <b>FOR</b></p>");
+
+// Піднесення числа x до степеня
+let x = parseFloat(prompt("Введіть число x")); // задане число
+let y = parseInt(prompt("Введіть степінь y")); // степінь, до якого треба піднести число
+
+if (isNaN(x) || isNaN(y)) {
+    document.write("<p style='color:red;'>Будь ласка, введіть коректні числа.</p>");
+} else {
+    let z = (y >= 0) ? 1 : 1 / x; // результат
+    for (let i = 0; i < Math.abs(y); i++) {
+        z *= x;
+    }
+    document.write("<p>Число " + x + " у " + y + " степені дорівнює " + z.toFixed(2) + ".</p>");
+
+    document.write("<p>Використання оператора циклу <b>WHILE</b></p>");
+    let z1 = (y >= 0) ? 1 : 1 / x;
+    let i = 0;
+    while (i < Math.abs(y)) {
+        z1 *= x;
+        i++;
+    }
+    document.write("<p>Число " + x + " у " + y + " степені дорівнює " + z1.toFixed(2) + ".</p>");
+
+    document.write("<p>Використання оператора циклу <b>DO WHILE</b></p>");
+    let z2 = (y >= 0) ? 1 : 1 / x;
+    i = 0;
+    do {
+        z2 *= x;
+        i++;
+    } while (i < Math.abs(y));
+    document.write("<p>Число " + x + " у " + y + " степені дорівнює " + z2.toFixed(2) + ".</p>");
+}
+		</script>
+	</body>
+    <a href="lab 2.html">Головна</a>
+</html>
